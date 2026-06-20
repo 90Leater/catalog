@@ -5,29 +5,7 @@
   "kategori": "Sandal Wanita 7cm",
   "folder": "Betmen 7cm",
   "warna": [
-    "abu nude.jpg",
-    "abu tua.jpg",
-    "army.jpg",
-    "coklat.jpg",
-    "fuschia.jpg",
-    "green tea.jpg",
-    "hijau.jpg",
-    "hitam.jpg",
-    "kuning.jpg",
-    "lemon.jpg",
-    "maroon.jpg",
-    "merah.jpg",
-    "milo.jpg",
-    "mocca muda.jpg",
-    "mocca susu.jpg",
-    "mocca.jpg",
-    "navy.jpg",
-    "peach.jpg",
-    "pink baby.jpg",
-    "softblue.jpg",
-    "tan tua.jpg",
-    "tan.jpg",
-    "ungu.jpg"
+    "abu nude.jpg"
   ]
 },
 {
@@ -37,28 +15,36 @@
   "kategori": "Sandal Wanita 5cm",
   "folder": "Blazer 5cm-kyu",
   "warna": [
-    "abu nude.jpg",
-    "abu tua.jpg",
-    "army.jpg",
-    "coklat.jpg",
-    "fuschia.jpg",
-    "green tea.jpg",
-    "hijau.jpg",
-    "hitam.jpg",
-    "kuning.jpg",
-    "lemon.jpg",
-    "maroon.jpg",
-    "merah.jpg",
-    "milo.jpg",
-    "mocca muda.jpg",
-    "mocca susu.jpg",
-    "mocca.jpg",
-    "navy.jpg",
-    "peach.jpg",
-    "pink baby.jpg",
-    "softblue.jpg",
-    "tan tua.jpg",
-    "tan.jpg",
-    "ungu.jpg"
+    "abu nude.jpg"
+  ]
+},
+{
+  "id": 3,
+  "kode": "KopB-F",
+  "nama": "Kokop B",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "Kop B Flat",
+  "warna": [
+    "abu nude.jpg"
+  ]
+},
+{
+  "id": 4,
+  "kode": "KptBlt",
+  "nama": "Kupat Bulat",
+  "kategori": "Sandal Wanita 7cm",
+  "folder": "Kpt bulat 7cm",
+  "warna": [
+    "abu nude.jpg"
+  ]
+},
+{
+  "id": 5,
+  "kode": "Adyr",
+  "nama": "Adyora",
+  "kategori": "Sandal Wanita 5cm",
+  "folder": "adyora 5cm",
+  "warna": [
+    "abu nude.jpg"
   ]
 }
