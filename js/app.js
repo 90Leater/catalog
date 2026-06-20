@@ -9,7 +9,7 @@ fetch('product.json')
     products.forEach(product => {
 
         const imagePath =
-        `Images/${product.folder}/abu nude.jpg`;
+`Images/${product.folder}/${product.thumbnail}`;
 
         const card = `
         <div class="card">
