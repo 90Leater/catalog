@@ -4,34 +4,39 @@
   "kode": "BETMEN",
   "nama": "Betmen 7cm",
   "kategori": "Sandal Wanita 7cm",
-  "folder": "Betmen 7cm"
+  "folder": "Betmen 7cm",
+  "thumbnail": "abu nude.jpg"
 },
 {
   "id": 2,
   "kode": "BLAZER",
   "nama": "Blazer",
   "kategori": "Sandal Wanita 5cm",
-  "folder": "Blazer 5cm-kyu"
+  "folder": "Blazer 5cm-kyu",
+  "thumbnail": "abu nude.jpg"
 },
 {
   "id": 3,
   "kode": "KopB-F",
   "nama": "Kokop B",
   "kategori": "Sandal Wanita Flat",
-  "folder": "Kop B Flat"
+  "folder": "Kop B flat",
+  "thumbnail": "abu nude.jpg"
 },
 {
   "id": 4,
   "kode": "KptBlt",
   "nama": "Kupat Bulat",
   "kategori": "Sandal Wanita 7cm",
-  "folder": "Kpt bulat 7cm"
+  "folder": "Kpt bulat 7cm",
+  "thumbnail": "abu nude.jpg"
 },
 {
   "id": 5,
   "kode": "Adyr",
   "nama": "Adyora",
   "kategori": "Sandal Wanita 5cm",
-  "folder": "adyora 5cm"
+  "folder": "adyora 5cm",
+  "thumbnail": "abu nude.jpg"
 }
 ]
