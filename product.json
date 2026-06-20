@@ -1,10 +1,10 @@
-{
+[
+  {
   "id": 1,
   "kode": "BETMEN",
   "nama": "Betmen 7cm",
   "kategori": "Sandal Wanita 7cm",
   "folder": "Betmen 7cm"
-  ]
 },
 {
   "id": 2,
@@ -12,7 +12,6 @@
   "nama": "Blazer",
   "kategori": "Sandal Wanita 5cm",
   "folder": "Blazer 5cm-kyu"
-  ]
 },
 {
   "id": 3,
@@ -20,7 +19,6 @@
   "nama": "Kokop B",
   "kategori": "Sandal Wanita Flat",
   "folder": "Kop B Flat"
-  ]
 },
 {
   "id": 4,
@@ -28,7 +26,6 @@
   "nama": "Kupat Bulat",
   "kategori": "Sandal Wanita 7cm",
   "folder": "Kpt bulat 7cm"
-  ]
 },
 {
   "id": 5,
@@ -36,5 +33,5 @@
   "nama": "Adyora",
   "kategori": "Sandal Wanita 5cm",
   "folder": "adyora 5cm"
-  ]
 }
+]
