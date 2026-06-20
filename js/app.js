@@ -45,7 +45,7 @@ fetch('product.json')
             product.kategori;
 
             document.getElementById('modalWhatsapp').href =
-            `https://wa.me/6281234567890?text=Saya ingin pesan ${product.nama}`;
+            `https://wa.me/6288973623416?text=Saya ingin pesan ${product.nama}`;
 
             document.getElementById('productModal').style.display =
             'block';
