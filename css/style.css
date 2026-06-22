@@ -415,3 +415,36 @@ input,select{
     color:white;
 
 }
+.product-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:15px 0;
+
+}
+
+.tab-btn{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#eee;
+
+}
+
+.tab-btn.active{
+
+    background:#25D366;
+
+    color:white;
+
+}
