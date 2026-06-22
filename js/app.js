@@ -5,12 +5,41 @@ fetch('product.json')
     const container = document.getElementById('products');
     const searchInput = document.getElementById('search');
     const pagination = document.getElementById('pagination');
+    const kategoriFilter = document.getElementById('kategoriFilter');
 
     let currentPage = 1;
     let currentProductIndex = 0;
     let selectedColor = '';
 
     const productsPerPage = 10;
+    function loadCategories(){
+
+    const categories =
+    [...new Set(
+        products.map(
+            product => product.kategori
+        )
+    )];
+
+    kategoriFilter.innerHTML =
+    '<option value="">Semua Kategori</option>';
+
+    categories.forEach(category => {
+
+        const option =
+        document.createElement('option');
+
+        option.value =
+        category;
+
+        option.textContent =
+        category;
+
+        kategoriFilter.appendChild(option);
+
+    });
+
+}
 
     function openProduct(product,index){
 
@@ -206,33 +235,55 @@ fetch('product.json')
 
     function filterProducts(){
 
-        const keyword =
-        searchInput.value.toLowerCase();
+    const keyword =
+    searchInput.value.toLowerCase();
 
-        const filtered =
-        products.filter(product =>
+    const kategori =
+    kategoriFilter.value;
 
-            product.nama.toLowerCase()
+    const filtered =
+    products.filter(product => {
+
+        const cocokKeyword =
+
+            product.nama
+            .toLowerCase()
             .includes(keyword)
 
             ||
 
-            product.kode.toLowerCase()
-            .includes(keyword)
+            product.kode
+            .toLowerCase()
+            .includes(keyword);
 
-        );
+        const cocokKategori =
 
-        currentPage = 1;
+            kategori === ''
 
-        renderProducts(filtered);
+            ||
 
-        renderPagination(filtered);
+            product.kategori === kategori;
 
-    }
+        return cocokKeyword &&
+               cocokKategori;
+
+    });
+
+    currentPage = 1;
+
+    renderProducts(filtered);
+
+    renderPagination(filtered);
+
+}
 
     searchInput.addEventListener(
         'input',
         filterProducts
+    );
+    kategoriFilter.addEventListener(
+    'change',
+    filterProducts
     );
     document
     .getElementById('prevProduct')
@@ -267,6 +318,8 @@ document
     }
 
 });
+
+    loadCategories();
 
     renderProducts(products);
 
