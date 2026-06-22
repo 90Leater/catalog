@@ -9,6 +9,7 @@ fetch('product.json')
     const kategoriFilter = document.getElementById('kategoriFilter');
 
     let currentPage = 1;
+    let currentView = 'all';
     let currentProductIndex = 0;
     let selectedColor = '';
 
@@ -410,9 +411,22 @@ favBtn.addEventListener(
             ||
 
             product.kategori === kategori;
+        const favorites =
+        getFavorites();
+
+        const cocokFavorit =
+
+            currentView === 'all'
+
+            ||
+
+            favorites.includes(
+                product.id
+            );
 
         return cocokKeyword &&
-               cocokKategori;
+               cocokKategori &&
+               cocokFavorit;
 
     });
 
@@ -446,6 +460,41 @@ favBtn.addEventListener(
         );
 
     }
+
+});
+document
+.getElementById('showAll')
+.addEventListener('click', () => {
+
+    currentView = 'all';
+
+    document
+    .getElementById('showAll')
+    .classList.add('active');
+
+    document
+    .getElementById('showFavorites')
+    .classList.remove('active');
+
+    filterProducts();
+
+});
+
+document
+.getElementById('showFavorites')
+.addEventListener('click', () => {
+
+    currentView = 'favorites';
+
+    document
+    .getElementById('showFavorites')
+    .classList.add('active');
+
+    document
+    .getElementById('showAll')
+    .classList.remove('active');
+
+    filterProducts();
 
 });
 
