@@ -136,9 +136,23 @@ input,select{
 }
 #galleryThumbs{
     display:flex;
-    gap:10px;
-    margin:15px 0;
     flex-wrap:wrap;
+    gap:8px;
+    margin:15px 0;
+}
+
+.color-btn{
+    padding:8px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:white;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.color-btn:hover{
+    background:#25D366;
+    color:white;
 }
 
 #galleryThumbs img{
