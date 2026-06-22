@@ -2,6 +2,10 @@ fetch('product.json')
 .then(res => res.json())
 .then(products => {
 
+    console.log("Jumlah produk:", products.length);
+
+    const container = document.getElementById('products');
+
 ```
 const container = document.getElementById('products');
 const searchInput = document.getElementById('search');
