@@ -61,7 +61,59 @@ fetch('product.json')
 }
 
     function openProduct(product,index){
+    saveRecent(product.id);
+        function renderRecentProducts(){
 
+    const container =
+    document.getElementById('recentProducts');
+
+    container.innerHTML = '';
+
+    const recent =
+    JSON.parse(
+        localStorage.getItem('recentProducts')
+    ) || [];
+
+    recent.forEach(id => {
+
+        const product =
+        products.find(
+            p => p.id === id
+        );
+
+        if(!product) return;
+
+        const card =
+        document.createElement('div');
+
+        card.className =
+        'recent-card';
+
+        card.innerHTML = `
+            <img
+            src="Images/${product.folder}/${product.thumbnail}"
+            loading="lazy">
+
+            <p>${product.nama}</p>
+        `;
+
+        card.addEventListener('click', () => {
+
+            const index =
+            products.findIndex(
+                p => p.id === product.id
+            );
+
+            openProduct(product,index);
+
+        });
+
+        container.appendChild(card);
+
+    });
+
+}
+    renderRecentProducts();
     currentProductIndex = index;
 
     const imagePath =
@@ -216,6 +268,28 @@ relatedProducts.forEach(item => {
         );
 
     }
+    function saveRecent(productId){
+
+    let recent =
+    JSON.parse(
+        localStorage.getItem('recentProducts')
+    ) || [];
+
+    recent =
+    recent.filter(
+        id => id !== productId
+    );
+
+    recent.unshift(productId);
+
+    recent = recent.slice(0,8);
+
+    localStorage.setItem(
+        'recentProducts',
+        JSON.stringify(recent)
+    );
+
+}
     function updateFavoriteCount(){
 
     const count =
@@ -547,6 +621,8 @@ document
 });
 
     loadCategories();
+    
+    renderRecentProducts();
 
     renderProducts(products);
 
