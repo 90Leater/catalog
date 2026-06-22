@@ -215,6 +215,16 @@ relatedProducts.forEach(item => {
         );
 
     }
+    function updateFavoriteCount(){
+
+    const count =
+    getFavorites().length;
+
+    document
+    .getElementById('favoriteCount')
+    .textContent = count;
+
+}
     function renderProducts(filteredProducts){
 
         container.innerHTML = '';
@@ -330,6 +340,7 @@ favBtn.addEventListener(
     saveFavorites(
     favorites
     );
+    updateFavoriteCount();
 
 });
             container.appendChild(card);
