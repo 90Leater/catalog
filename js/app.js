@@ -621,6 +621,15 @@ document
 });
 
     loadCategories();
+    currentView = 'all';
+
+    document
+    .getElementById('showAll')
+    .classList.add('active');
+
+    document
+    .getElementById('showFavorites')
+    .classList.remove('active');
     
     renderRecentProducts();
 
