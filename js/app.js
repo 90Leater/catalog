@@ -59,30 +59,20 @@ fetch('product.json')
 
     document.getElementById('modalCategory').textContent =
     product.kategori;
-    const relatedContainer = document.getElementById('relatedProducts');
+    const relatedContainer =
+document.getElementById('relatedProducts');
 
-    relatedContainer.innerHTML = '';
+relatedContainer.innerHTML = '';
 
-    const relatedProducts =
-    products.filter(p =>
+const relatedProducts =
+products.filter(p =>
 
-    p.kategori === product.kategori
-
-    &&
-
+    p.kategori === product.kategori &&
     p.id !== product.id
 
-    ).slice(0,4);
+).slice(0,4);
 
-    relatedProducts.forEach(item => {
-
-    const related =
-    document.createElement('div');
-
-    related.className =
-    'related-item';
-
-    relatedProducts.forEach(item => {
+relatedProducts.forEach(item => {
 
     const related =
     document.createElement('div');
@@ -109,13 +99,9 @@ fetch('product.json')
 
     });
 
-    relatedContainer.appendChild(
-        related
-    );
+    relatedContainer.appendChild(related);
 
 });
-
-    document.getElementById('modalWhatsapp').onclick = () => {
 
     const pesan =
     `Halo GO.Leather
