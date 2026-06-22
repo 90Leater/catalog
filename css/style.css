@@ -448,3 +448,32 @@ input,select{
     color:white;
 
 }
+.section-title{
+    text-align:center;
+    margin-top:20px;
+}
+
+.recent-products{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding:15px;
+}
+
+.recent-card{
+    min-width:120px;
+    cursor:pointer;
+    text-align:center;
+}
+
+.recent-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.recent-card p{
+    font-size:12px;
+    margin-top:5px;
+}
