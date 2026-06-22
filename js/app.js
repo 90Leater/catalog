@@ -4,7 +4,16 @@ fetch('product.json')
 
     const container = document.getElementById('products');
     const searchInput = document.getElementById('search');
+    const pagination =document.getElementById('pagination');
+
+    let currentPage = 1;
+    const productsPerPage = 10;
     const kategoriFilter = document.getElementById('kategoriFilter');
+    const start = (currentPage - 1) * productsPerPage;
+
+    const end = start + productsPerPage;
+
+    const pageProducts = filteredProducts.slice(start,end);
 
     function renderProducts(filteredProducts) {
 
@@ -12,7 +21,7 @@ fetch('product.json')
         document.getElementById('productCount').textContent =
         `Menampilkan ${filteredProducts.length} Produk`;
 
-        filteredProducts.forEach(product => {
+        pageProducts.forEach(product => {
 
             const imagePath =
             `Images/${product.folder}/${product.thumbnail}`;
@@ -107,6 +116,39 @@ fetch('product.json')
     }
 
     renderProducts(products);
+    renderPagination(products);
+    function renderPagination(filteredProducts){
+
+    pagination.innerHTML = '';
+
+    const totalPages =
+    Math.ceil(filteredProducts.length / productsPerPage);
+
+    for(let i=1;i<=totalPages;i++){
+
+        const btn =
+        document.createElement('button');
+
+        btn.textContent = i;
+
+        if(i === currentPage){
+            btn.classList.add('active');
+        }
+
+        btn.addEventListener('click', () => {
+
+            currentPage = 1;
+
+            renderProducts(filteredProducts);
+            renderPagination(filteredProducts);
+
+        });
+
+        pagination.appendChild(btn);
+
+    }
+
+}
 
     function filterProducts(){
 
@@ -130,7 +172,10 @@ fetch('product.json')
 
     });
 
+    currentPage = 1;
+
     renderProducts(filtered);
+    renderPagination(filtered);
 
 }
 
