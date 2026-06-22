@@ -5,6 +5,7 @@ fetch('product.json')
     const container = document.getElementById('products');
     const searchInput = document.getElementById('search');
     const pagination = document.getElementById('pagination');
+    const productCount = document.getElementById('productCount');
     const kategoriFilter = document.getElementById('kategoriFilter');
 
     let currentPage = 1;
@@ -12,6 +13,22 @@ fetch('product.json')
     let selectedColor = '';
 
     const productsPerPage = 10;
+    function updateProductCount(filteredProducts){
+
+    const start =
+    (currentPage - 1) * productsPerPage + 1;
+
+    const end =
+    Math.min(
+        currentPage * productsPerPage,
+        filteredProducts.length
+    );
+
+    productCount.textContent =
+    `Menampilkan ${start}-${end} dari ${filteredProducts.length} produk`;
+
+}
+    
     function loadCategories(){
 
     const categories =
@@ -182,6 +199,7 @@ relatedProducts.forEach(item => {
     function renderProducts(filteredProducts){
 
         container.innerHTML = '';
+        updateProductCount(filteredProducts);
 
         const start =
         (currentPage - 1) * productsPerPage;
