@@ -5,7 +5,32 @@
   "nama": "Betmen",
   "kategori": "Sandal Wanita 7cm",
   "folder": "Betmen 7cm",
-  "thumbnail": "army.jpg"
+  "thumbnail": "army.jpg",
+  "warna": [
+    "abu nude.jpg",
+    "abu tua.jpg",
+    "army.jpg",
+    "cokelat.jpg",
+    "fuschia.jpg",
+    "green tea.jpg",
+    "hijau.jpg",
+    "hitam.jpg",
+    "kuning.jpg",
+    "lemon.jpg",
+    "maroon.jpg",
+    "merah.jpg",
+    "milo.jpg",
+    "mocca muda.jpg",
+    "mocca susu.jpg",
+    "mocca.jpg",
+    "navy.jpg",
+    "peach.jpg",
+    "pink baby.jpg",
+    "softblue.jpg",
+    "tan tua.jpg",
+    "tan.jpg",
+    "ungu.jpg"
+  ]
   },
   {
   "id": 2,
@@ -137,8 +162,8 @@
   },
   {
   "id": 18,
-  "kode": "Jpu",
-  "nama": "JPU",
+  "kode": "Pju",
+  "nama": "PJU",
   "kategori": "Sandal Wanita Lami",
   "folder": "jempol untun",
   "thumbnail": "army.jpg"
