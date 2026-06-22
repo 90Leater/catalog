@@ -75,12 +75,18 @@ searchInput.addEventListener('input', () => {
 
     const keyword =
     searchInput.value.toLowerCase();
+    console.log("Cari:", keyword);
 
-    const filtered =
-products.filter(product =>
-    product.nama.toLowerCase().includes(keyword)
-);
+    const filtered = products.filter(product => {
 
+    const nama = String(product.nama || '').toLowerCase();
+    const kode = String(product.kode || '').toLowerCase();
+
+    return nama.includes(keyword) ||
+           kode.includes(keyword);
+
+});
+    console.log("Hasil:", filtered.length);
     renderProducts(filtered);
 
 });
