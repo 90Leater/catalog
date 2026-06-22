@@ -102,6 +102,7 @@ relatedProducts.forEach(item => {
     relatedContainer.appendChild(related);
 
 });
+    document.getElementById('modalWhatsapp').onclick = () => {
 
     const pesan =
     `Halo GO.Leather
