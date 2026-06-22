@@ -155,3 +155,15 @@ input,select{
     border-radius:12px;
     position:relative;
 }
+.modal-body{
+    display:flex;
+    gap:20px;
+}
+
+.modal-left{
+    flex:1;
+}
+
+.modal-right{
+    flex:1;
+}
