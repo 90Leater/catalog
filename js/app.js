@@ -85,12 +85,28 @@ fetch('product.json')
     related.textContent =
     item.nama;
 
+    relatedProducts.forEach(item => {
+
+    const related =
+    document.createElement('div');
+
+    related.className =
+    'related-item';
+
+    const relatedImage =
+    `Images/${item.folder}/${item.thumbnail}`;
+
+    related.innerHTML = `
+        <img src="${relatedImage}" alt="${item.nama}">
+        <span>${item.nama}</span>
+    `;
+
     related.addEventListener('click', () => {
 
-    const index =
-    products.findIndex(
-    p => p.id === item.id
-    );
+        const index =
+        products.findIndex(
+            p => p.id === item.id
+        );
 
         openProduct(item,index);
 
