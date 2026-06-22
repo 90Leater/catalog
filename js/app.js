@@ -72,10 +72,7 @@ searchInput.addEventListener('input', () => {
     const keyword =
     searchInput.value.toLowerCase();
 
-    const filtered =
-    products.filter(product =>
-        product.nama.toLowerCase().includes(keyword) ||
-        product.kode.toLowerCase().includes(keyword)
+    const filtered = products;
     );
 
     renderProducts(filtered);
