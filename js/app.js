@@ -67,6 +67,7 @@ function renderProducts(filteredProducts){
 renderProducts(products);
 
 searchInput.addEventListener('input', () => {
+    console.log(searchInput.value);
 
     const keyword =
     searchInput.value.toLowerCase();
