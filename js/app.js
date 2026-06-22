@@ -50,8 +50,7 @@ fetch('product.json')
 
                     Object.entries(product.warna).forEach(([namaWarna, file]) => {
 
-                        const btn =
-                        document.createElement('button');
+                        const btn = document.createElement('button');
 
                         btn.className = 'color-btn';
 
@@ -59,14 +58,20 @@ fetch('product.json')
 
                         btn.addEventListener('click', () => {
 
-                            document.getElementById('modalImage').src =
-                            `Images/${product.folder}/${file}`;
+                        document.getElementById('modalImage').src =
+                        `Images/${product.folder}/${file}`;
 
+                        document.querySelectorAll('.color-btn').forEach(b => {
+                            b.classList.remove('active');
                         });
 
-                        gallery.appendChild(btn);
+                        btn.classList.add('active');
 
                     });
+
+                    gallery.appendChild(btn);
+
+                });
 
 
     }
