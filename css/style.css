@@ -194,3 +194,23 @@ input,select{
     margin:10px 0;
     color:#555;
 }
+.color-btn{
+    padding:8px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:white;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.color-btn:hover{
+    background:#25D366;
+    color:white;
+}
+
+.color-btn.active{
+    background:#25D366;
+    color:white;
+    border-color:#25D366;
+    font-weight:bold;
+}
