@@ -101,7 +101,10 @@ relatedProducts.forEach(item => {
     `Images/${item.folder}/${item.thumbnail}`;
 
     related.innerHTML = `
-        <img src="${relatedImage}" alt="${item.nama}">
+        <img
+            src="${relatedImage}"
+            alt="${item.nama}"
+            loading="lazy">
         <span>${item.nama}</span>
     `;
 
@@ -221,7 +224,10 @@ relatedProducts.forEach(item => {
             card.className = 'card';
 
             card.innerHTML = `
-                <img src="${imagePath}" alt="${product.nama}">
+                <img
+                    src="${imagePath}"
+                    alt="${product.nama}"
+                    loading="lazy">
                 <div class="card-body">
 
                     <h3>${product.nama}</h3>
