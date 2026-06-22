@@ -48,24 +48,26 @@ fetch('product.json')
 
                 if(product.warna){
 
-                    product.warna.forEach(file => {
+                    Object.entries(product.warna).forEach(([namaWarna, file]) => {
 
-                        const thumb =
-                        document.createElement('img');
+                        const btn =
+                        document.createElement('button');
 
-                        thumb.src =
-                        `Images/${product.folder}/${file}`;
+                        btn.className = 'color-btn';
 
-                        thumb.addEventListener('click', () => {
+                        btn.textContent = namaWarna;
+
+                        btn.addEventListener('click', () => {
 
                             document.getElementById('modalImage').src =
                             `Images/${product.folder}/${file}`;
 
-                });
+                        });
 
-                gallery.appendChild(thumb);
+                        gallery.appendChild(btn);
 
-            });
+                    });
+
 
     }
 
