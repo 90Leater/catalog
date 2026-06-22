@@ -146,3 +146,12 @@ input,select{
 #galleryThumbs img:hover{
     border-color:#25D366;
 }
+.modal-content{
+    background:white;
+    width:95%;
+    max-width:900px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:12px;
+    position:relative;
+}
