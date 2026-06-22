@@ -8,6 +8,7 @@ fetch('product.json')
 
     let currentPage = 1;
     let currentProductIndex = 0;
+    let selectedColor = '';
 
     const productsPerPage = 10;
 
@@ -30,8 +31,23 @@ fetch('product.json')
     document.getElementById('modalCategory').textContent =
     product.kategori;
 
-    document.getElementById('modalWhatsapp').href =
-    `https://wa.me/6288973623416?text=Saya ingin pesan ${product.nama}`;
+    document.getElementById('modalWhatsapp').onclick = () => {
+
+    const pesan =
+    `Halo GO.Leather
+
+    Saya ingin tanya harga:
+
+    Produk : ${product.nama}
+    Kode : ${product.kode}
+    Warna : ${selectedColor}`;
+
+    window.open(
+        `https://wa.me/6288973623416?text=${encodeURIComponent(pesan)}`,
+        '_blank'
+    );
+
+};
 
     const gallery =
     document.getElementById('galleryThumbs');
@@ -51,23 +67,29 @@ fetch('product.json')
 
             btn.textContent = namaWarna;
             if(file === product.thumbnail){
+
             btn.classList.add('active');
+
+            selectedColor = namaWarna;
+
             }
 
             btn.addEventListener('click', () => {
 
-                document.getElementById('modalImage').src =
-                `Images/${product.folder}/${file}`;
+            selectedColor = namaWarna;
 
-                document
-                .querySelectorAll('.color-btn')
-                .forEach(b =>
-                    b.classList.remove('active')
-                );
+            document.getElementById('modalImage').src =
+            `Images/${product.folder}/${file}`;
 
-                btn.classList.add('active');
+            document
+            .querySelectorAll('.color-btn')
+            .forEach(b =>
+            b.classList.remove('active')
+            );
 
-            });
+            btn.classList.add('active');
+
+        });
 
             gallery.appendChild(btn);
 
