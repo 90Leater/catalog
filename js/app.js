@@ -59,6 +59,48 @@ fetch('product.json')
 
     document.getElementById('modalCategory').textContent =
     product.kategori;
+    const relatedContainer = document.getElementById('relatedProducts');
+
+    relatedContainer.innerHTML = '';
+
+    const relatedProducts =
+    products.filter(p =>
+
+    p.kategori === product.kategori
+
+    &&
+
+    p.id !== product.id
+
+    ).slice(0,4);
+
+    relatedProducts.forEach(item => {
+
+    const related =
+    document.createElement('div');
+
+    related.className =
+    'related-item';
+
+    related.textContent =
+    item.nama;
+
+    related.addEventListener('click', () => {
+
+    const index =
+    products.findIndex(
+    p => p.id === item.id
+    );
+
+        openProduct(item,index);
+
+    });
+
+    relatedContainer.appendChild(
+        related
+    );
+
+});
 
     document.getElementById('modalWhatsapp').onclick = () => {
 
