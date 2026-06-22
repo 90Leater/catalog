@@ -167,3 +167,9 @@ input,select{
 .modal-right{
     flex:1;
 }
+.product-count{
+    text-align:center;
+    font-weight:bold;
+    margin:10px 0;
+    color:#555;
+}
