@@ -2,9 +2,15 @@ fetch('product.json')
 .then(res => res.json())
 .then(products => {
 
-    const container = document.getElementById('products');
+```
+const container = document.getElementById('products');
+const searchInput = document.getElementById('search');
 
-    products.forEach(product => {
+function renderProducts(filteredProducts){
+
+    container.innerHTML = '';
+
+    filteredProducts.forEach(product => {
 
         const imagePath =
         `Images/${product.folder}/${product.thumbnail}`;
@@ -56,13 +62,35 @@ fetch('product.json')
 
     });
 
+}
+
+renderProducts(products);
+
+searchInput.addEventListener('input', () => {
+
+    const keyword =
+    searchInput.value.toLowerCase();
+
+    const filtered =
+    products.filter(product =>
+        product.nama.toLowerCase().includes(keyword) ||
+        product.kode.toLowerCase().includes(keyword)
+    );
+
+    renderProducts(filtered);
+
+});
+```
+
 });
 
 document.addEventListener('click', function(e){
 
-    if(e.target.classList.contains('close')){
-        document.getElementById('productModal').style.display =
-        'none';
-    }
+```
+if(e.target.classList.contains('close')){
+    document.getElementById('productModal').style.display =
+    'none';
+}
+```
 
 });
