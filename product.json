@@ -158,6 +158,246 @@
   "kategori": "Sandal Wanita Flat",
   "folder": "jpr",
   "thumbnail": "army.jpg"
+  },
+  {
+  "id": 21,
+  "kode": "Jpu",
+  "nama": "JPU",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "jpu",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 22,
+  "kode": "koplos",
+  "nama": "Kokop Polos",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop 779",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 23,
+  "kode": "KopB",
+  "nama": "Kokop B",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop B",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 24,
+  "kode": "Koplong",
+  "nama": "KopLong",
+  "kategori": "Sandal Wanita 5cm",
+  "folder": "kokop bolong 5cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 25,
+  "kode": "Jmpl",
+  "nama": "Kokop Jempol",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop jempol",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 26,
+  "kode": "KopTa",
+  "nama": "Pita Bali",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop pita",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 27,
+  "kode": "Koplos",
+  "nama": "Kokop Polos",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop polos",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 28,
+  "kode": "KopRan",
+  "nama": "Kokop Rte",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop rante",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 29,
+  "kode": "KopVran2",
+  "nama": "Kokop V Rte2",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop v rante 2",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 30,
+  "kode": "KopVran",
+  "nama": "Kokop V Rte",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "kokop v rante",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 31,
+  "kode": "Nng3",
+  "nama": "Nunung Polos",
+  "kategori": "Sandal Wanita 3cm",
+  "folder": "nunung 3cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 32,
+  "kode": "Nng7",
+  "nama": "Nunung Polos",
+  "kategori": "Sandal Wanita 7cm",
+  "folder": "nunung 7cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 33,
+  "kode": "Osn5",
+  "nama": "Capit Oshin",
+  "kategori": "Sandal Wanita 5cm",
+  "folder": "oshin 5cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 34,
+  "kode": "OsnF",
+  "nama": "Capit Oshin",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "oshin flat",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 35,
+  "kode": "OvlGc",
+  "nama": "Overall Gc",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "overall gucci",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 36,
+  "kode": "P2",
+  "nama": "P2 5",
+  "kategori": "Sandal Wanita 5cm",
+  "folder": "p2 5cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 37,
+  "kode": "P254",
+  "nama": "P2 5-4",
+  "kategori": "Sandal Wanita 7cm",
+  "folder": "p2 7cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 38,
+  "kode": "P254",
+  "nama": "P2 5-4",
+  "kategori": "Sandal Wanita 3cm",
+  "folder": "p2 anyam",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 39,
+  "kode": "Pitadit",
+  "nama": "Pita Adit",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "pita adit",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 40,
+  "kode": "PitaM5",
+  "nama": "Pita M",
+  "kategori": "Sandal Wanita 5cm",
+  "folder": "pita monyet 5cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 41,
+  "kode": "PitaMF",
+  "nama": "Pita M",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "pita monyet flat",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 42,
+  "kode": "PitaU",
+  "nama": "Pita U",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "pita uan",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 43,
+  "kode": "Sadit",
+  "nama": "Slempang Adt",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "selempang adit",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 44,
+  "kode": "Slop5",
+  "nama": "Slop 5",
+  "kategori": "Sandal Wanita 5cm",
+  "folder": "slop 5cm",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 45,
+  "kode": "SlopG",
+  "nama": "Slop Gsp",
+  "kategori": "Sandal Wanita Tahu",
+  "folder": "slop gesper sifa",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 46,
+  "kode": "SlopG",
+  "nama": "Slop Gsp",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "slop gspr flat",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 47,
+  "kode": "SlopL",
+  "nama": "Slop List",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "slop list",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 48,
+  "kode": "Snl",
+  "nama": "Sonali",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "sonali",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 49,
+  "kode": "TalkrTl",
+  "nama": "Tkr Tl",
+  "kategori": "Sandal Wanita Flat",
+  "folder": "talikur tali bk",
+  "thumbnail": "army.jpg"
+  },
+  {
+  "id": 50,
+  "kode": "Yys",
+  "nama": "YY",
+  "kategori": "Sandal Wanita Tahu",
+  "folder": "yy sifa",
+  "thumbnail": "army.jpg"
   }
 ]
 
