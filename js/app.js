@@ -235,6 +235,11 @@ relatedProducts.forEach(item => {
                     <p><b>Kode:</b> ${product.kode}</p>
 
                     <p>${product.kategori}</p>
+                <button
+                class="favorite-btn"
+                data-id="${product.id}">
+                ♡ Favorit
+                </button>
 
                 </div>
             `;
