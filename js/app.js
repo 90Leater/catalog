@@ -182,6 +182,47 @@ relatedProducts.forEach(item => {
     relatedContainer.appendChild(related);
 
 });
+    document
+.getElementById('shareProduct')
+.onclick = async () => {
+
+    const shareText =
+`Lihat produk ${product.nama}
+
+Kode: ${product.kode}
+
+Website:
+${window.location.href}`;
+
+    if(navigator.share){
+
+        try{
+
+            await navigator.share({
+
+                title: product.nama,
+
+                text: shareText,
+
+                url: window.location.href
+
+            });
+
+        }catch(err){}
+
+    }else{
+
+        navigator.clipboard.writeText(
+            shareText
+        );
+
+        alert(
+            'Link produk berhasil disalin'
+        );
+
+    }
+
+};
     document.getElementById('modalWhatsapp').onclick = () => {
 
     const pesan =
