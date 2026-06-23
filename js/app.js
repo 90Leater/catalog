@@ -127,41 +127,35 @@ fetch('product.json')
         });
 
         container.appendChild(card);
-        const selectBtn =
-        card.querySelector(
-        '.select-product'
+        const checkbox = card.querySelector('.product-checkbox');
         );
 
-selectBtn.addEventListener(
-'click',
-(e) => {
+checkbox.addEventListener(
+'change',
+() => {
 
-    e.stopPropagation();
+    if(checkbox.checked){
 
-    if(
-    selectedProducts.includes(
-    product.id
-    )
-    ){
+        if(
+        !selectedProducts.includes(
+        product.id
+        )
+        ){
+            selectedProducts.push(
+            product.id
+            );
+        }
+
+    }else{
 
         selectedProducts =
         selectedProducts.filter(
         id => id !== product.id
         );
 
-    }else{
-
-        selectedProducts.push(
-        product.id
-        );
-
     }
 
     updateCart();
-
-    renderProducts(
-    filteredProducts
-    );
 
 });
 
