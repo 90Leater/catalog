@@ -1,0 +1,3 @@
+function openProduct(product,index){
+
+}
