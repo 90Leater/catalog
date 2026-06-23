@@ -759,3 +759,16 @@ body.dark .theme-footer{
     }
 
 }
+.footer-grid iframe{
+
+    width:100%;
+
+    max-width:280px;
+
+    height:150px;
+
+    border-radius:10px;
+
+    margin-top:10px;
+
+}
