@@ -87,10 +87,6 @@ function renderRecentProducts(){
 
     const checkbox =
       card.querySelector('.product-checkbox');
-    const checkbox =
-      card.querySelector(
-      '.product-checkbox'
-        );
 
     const selectLabel =
       card.querySelector(
