@@ -288,7 +288,7 @@ input,select{
 }
 .floating-wa{
     position:fixed;
-    right:20px;
+    right:15px;
     bottom:20px;
 
     background:#25D366;
@@ -296,9 +296,10 @@ input,select{
 
     text-decoration:none;
 
-    padding:14px 18px;
+    padding:10px 14px;
 
     border-radius:50px;
+    font-size:14px;
 
     font-weight:bold;
 
@@ -503,5 +504,52 @@ input,select{
 .share-btn:hover{
 
     opacity:.9;
+
+}
+@media (max-width:768px){
+
+    .hero{
+        padding:50px 20px;
+    }
+
+}
+@media (max-width:768px){
+
+    .hero h1{
+        font-size:48px;
+    }
+
+}
+@media (max-width:768px){
+
+    .toolbar{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .toolbar input,
+    .toolbar select{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+}
+@media (max-width:768px){
+
+    .section-title{
+        font-size:22px;
+    }
+
+}
+.recent-products{
+    justify-content:center;
+}
+@media (max-width:768px){
+
+    .recent-products{
+        justify-content:flex-start;
+        padding:10px;
+    }
 
 }
