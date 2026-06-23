@@ -5,8 +5,6 @@ let currentView = 'all';
 let currentProductIndex = 0;
 let selectedColor = '';
 
-let selectedProducts = [];
-
 const productsPerPage = 10;
 
 const container = document.getElementById('products');
