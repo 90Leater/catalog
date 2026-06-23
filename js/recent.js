@@ -93,14 +93,6 @@ function renderRecentProducts(){
       '.select-product'
       );
 
-      checkbox.addEventListener(
-      'click',
-      (e) => {
-
-      e.stopPropagation();
-
-});
-
       selectLabel.addEventListener(
       'click',
       (e) => {
