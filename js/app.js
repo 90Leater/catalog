@@ -447,11 +447,27 @@ ${window.location.href}`;
                     <p><b>Kode:</b> ${product.kode}</p>
 
                     <p>${product.kategori}</p>
-                <button
-                class="favorite-btn"
-                data-id="${product.id}">
-                ♡ Favorit
-                </button>
+
+<label class="select-product">
+
+<input
+type="checkbox"
+class="product-checkbox"
+data-id="${product.id}"
+
+${selectedProducts.includes(product.id)
+? 'checked'
+: ''}>
+
+<span>Pilih Produk</span>
+
+</label>
+
+<button
+class="favorite-btn"
+data-id="${product.id}">
+♡ Favorit
+</button>
 
                 </div>
             `;
@@ -527,6 +543,43 @@ favBtn.addEventListener(
     favorites
     );
     updateFavoriteCount();
+
+});
+            const checkbox =
+card.querySelector(
+'.product-checkbox'
+);
+
+checkbox.addEventListener(
+'change',
+(e) => {
+
+    e.stopPropagation();
+
+    if(checkbox.checked){
+
+        if(
+        !selectedProducts.includes(
+        product.id
+        )
+        ){
+
+            selectedProducts.push(
+                product.id
+            );
+
+        }
+
+    }else{
+
+        selectedProducts =
+        selectedProducts.filter(
+            id => id !== product.id
+        );
+
+    }
+
+    updateCart();
 
 });
             container.appendChild(card);
