@@ -778,25 +778,23 @@ body.dark .theme-footer{
 }
 .cart-bar{
 
-    position:sticky;
+    max-width:700px;
 
-    top:0;
+    margin:20px auto;
 
-    z-index:100;
+    padding:15px 20px;
 
-    background:#25D366;
+    border-radius:15px;
 
-    color:white;
+    background:white;
 
-    padding:10px 15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
 
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
-
-    gap:10px;
 
 }
 
@@ -811,6 +809,23 @@ body.dark .theme-footer{
     padding:8px 15px;
 
     border-radius:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+#cartWhatsapp{
+
+    background:#25D366;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:25px;
 
     font-weight:bold;
 
