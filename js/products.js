@@ -184,17 +184,20 @@ function renderProducts(filteredProducts){
         });
 
         const checkbox =
-        card.querySelector(
+            card.querySelector(
             '.product-checkbox'
         );
+
         const selectLabel =
-        card.querySelector(
-        '.select-product'
+            card.querySelector(
+            '.select-product'
         );
 
         selectLabel.addEventListener(
         'click',
         (e) => {
+
+        e.preventDefault();
 
         e.stopPropagation();
 
