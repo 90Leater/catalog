@@ -8,7 +8,7 @@ function updateCart(){
     'cartCount'
     ).textContent =
 
-    `🛒 ${selectedProducts.length} Produk Dipilih`;
+    '📋 ' + selectedProducts.length + ' Produk Dipilih';
 
     localStorage.setItem(
         'selectedProducts',
