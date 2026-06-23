@@ -781,5 +781,11 @@ themeToggle.addEventListener(
         '🌙 Dark Mode';
 
     }
+    if('serviceWorker' in navigator){
+
+    navigator.serviceWorker
+    .register('./sw.js');
+
+}
 
 });
