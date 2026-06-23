@@ -1,0 +1,3 @@
+function loadCategories(){}
+
+function filterProducts(){}
