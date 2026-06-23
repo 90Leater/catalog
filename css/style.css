@@ -718,3 +718,27 @@ body.dark .product-tabs button.active{
     font-size:18px;
 
 }
+.theme-footer{
+
+    margin-top:20px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#25D366;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+body.dark .theme-footer{
+
+    background:#444;
+
+}
