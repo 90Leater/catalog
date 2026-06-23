@@ -1,6 +1,5 @@
 function loadCategories(){
 
-```
 const categories =
 [...new Set(
     products.map(
@@ -31,7 +30,6 @@ categories.forEach(category => {
 
 function filterProducts(){
 
-```
 const keyword =
 searchInput.value.toLowerCase();
 
@@ -107,6 +105,5 @@ renderProducts(
 renderPagination(
     filtered
 );
-```
 
 }
