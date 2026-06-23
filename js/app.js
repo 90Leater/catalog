@@ -130,6 +130,31 @@ fetch('product.json')
 
 const checkbox =
 card.querySelector('.product-checkbox');
+        const checkbox =
+card.querySelector(
+'.product-checkbox'
+);
+
+const selectLabel =
+card.querySelector(
+'.select-product'
+);
+
+checkbox.addEventListener(
+'click',
+(e) => {
+
+    e.stopPropagation();
+
+});
+
+selectLabel.addEventListener(
+'click',
+(e) => {
+
+    e.stopPropagation();
+
+});
     checkbox.addEventListener(
     'click',
     (e) => {
