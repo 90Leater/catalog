@@ -99,15 +99,20 @@ fetch('product.json')
             loading="lazy">
 
             <p>${product.nama}</p>
-            <button
-            class="select-product"
-            data-id="${product.id}">
+            <label class="select-product">
+
+            <input
+            type="checkbox"
+            class="product-checkbox"
+            data-id="${product.id}"
 
             ${selectedProducts.includes(product.id)
-            ? '✓ Dipilih'
-            : '+ Pilih'}
+            ? 'checked'
+            : ''}>
+    
+            <span>Pilih Produk</span>
 
-            </button>
+            </label>
         `;
 
         card.addEventListener('click', () => {
