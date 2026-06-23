@@ -613,29 +613,7 @@ input,select{
     }
 
 }
-.theme-btn{
 
-    position:absolute;
-
-    top:20px;
-
-    right:20px;
-
-    padding:10px 15px;
-
-    border:none;
-
-    border-radius:20px;
-
-    background:white;
-
-    color:black;
-
-    cursor:pointer;
-
-    font-weight:bold;
-
-}
 body.dark{
 
     background:#121212;
