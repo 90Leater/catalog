@@ -194,3 +194,22 @@ ${window.location.href}`;
     ).style.display = 'none';
 
 });
+window.addEventListener(
+'click',
+(e) => {
+
+    const modal =
+    document.getElementById(
+        'productModal'
+    );
+
+    if(
+        e.target === modal
+    ){
+
+        modal.style.display =
+        'none';
+
+    }
+
+});
