@@ -1,0 +1,3 @@
+function renderPagination(){}
+
+function updateProductCount(){}
