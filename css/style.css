@@ -612,3 +612,93 @@ input,select{
     }
 
 }
+.theme-btn{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    padding:10px 15px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:white;
+
+    color:black;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+body.dark{
+
+    background:#121212;
+
+    color:white;
+
+}
+
+body.dark .toolbar{
+
+    background:#1a1a1a;
+
+}
+
+body.dark .card{
+
+    background:#222;
+
+    color:white;
+
+}
+
+body.dark .card-body p{
+
+    color:#ddd;
+
+}
+
+body.dark .modal-content{
+
+    background:#222;
+
+    color:white;
+
+}
+
+body.dark input,
+body.dark select{
+
+    background:#333;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+
+body.dark .footer{
+
+    background:#000;
+
+}
+
+body.dark .product-tabs button,
+body.dark .height-btn{
+
+    background:#333;
+
+    color:white;
+
+}
+
+body.dark .product-tabs button.active{
+
+    background:#25D366;
+
+}
