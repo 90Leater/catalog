@@ -183,3 +183,14 @@ ${window.location.href}`;
     'block';
 
 }
+    document
+    .querySelector('.close')
+    .addEventListener(
+    'click',
+    () => {
+
+    document.getElementById(
+        'productModal'
+    ).style.display = 'none';
+
+});
