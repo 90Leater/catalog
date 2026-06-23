@@ -1,17 +1,19 @@
-loadCategories();
+fetch('product.json')
+.then(res => res.json())
+.then(data => {
 
-currentView = 'all';
+    products = data;
 
-document
-.getElementById('showAll')
-.classList.add('active');
+    loadCategories();
 
-renderRecentProducts();
+    renderRecentProducts();
 
-renderProducts(products);
+    renderProducts(products);
 
-renderPagination(products);
+    renderPagination(products);
 
-updateFavoriteCount();
+    updateFavoriteCount();
 
-updateCart();
+    updateCart();
+
+});
