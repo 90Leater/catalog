@@ -703,3 +703,18 @@ body.dark .product-tabs button.active{
     background:#25D366;
 
 }
+.theme-icon{
+
+    border:none;
+
+    background:#eee;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
