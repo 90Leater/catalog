@@ -31,6 +31,22 @@ function openProduct(product,index){
     document.getElementById('modalName').textContent =
     product.nama;
 
+    document.title =
+    product.nama +
+    ' - Go Leather Catalog';
+
+    const metaDescription = document.getElementById('metaDescription');
+
+    if(metaDescription){
+
+    metaDescription.content =
+    product.nama +
+    ' | Kode: ' +
+    product.kode +
+    ' | GO.Leather';
+
+}
+
     document.getElementById('modalCode').textContent =
     'Kode: ' + product.kode;
 
@@ -252,14 +268,78 @@ addBtn.onclick = () => {
 
 }
     document
+document
 .querySelector('.close')
 .addEventListener(
 'click',
 () => {
 
+document.getElementById(
+    'productModal'
+).style.display = 'none';
+
+document.title =
+'GO.Leather Catalog';
+
+const metaDescription =
+document.getElementById(
+    'metaDescription'
+);
+
+if(metaDescription){
+
+    metaDescription.content =
+    'Katalog produk GO.Leather';
+
+}
+
+const url =
+new URL(
+    window.location.href
+);
+
+url.searchParams.delete(
+    'id'
+);
+
+window.history.replaceState(
+    {},
+    '',
+    url.pathname
+);
+
+});
+
+window.addEventListener(
+'click',
+(e) => {
+
+const modal =
+document.getElementById(
+    'productModal'
+);
+
+if(
+    e.target === modal
+){
+
+    modal.style.display =
+    'none';
+
+    document.title =
+    'GO.Leather Catalog';
+
+    const metaDescription =
     document.getElementById(
-        'productModal'
-    ).style.display = 'none';
+        'metaDescription'
+    );
+
+    if(metaDescription){
+
+        metaDescription.content =
+        'Katalog produk GO.Leather';
+
+    }
 
     const url =
     new URL(
@@ -276,39 +356,6 @@ addBtn.onclick = () => {
         url.pathname
     );
 
-});
-
-window.addEventListener(
-'click',
-(e) => {
-
-    const modal =
-    document.getElementById(
-        'productModal'
-    );
-
-    if(
-        e.target === modal
-    ){
-
-        modal.style.display =
-        'none';
-
-        const url =
-        new URL(
-            window.location.href
-        );
-
-        url.searchParams.delete(
-            'id'
-        );
-
-        window.history.replaceState(
-            {},
-            '',
-            url.pathname
-        );
-
-    }
+}
 
 });
