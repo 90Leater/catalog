@@ -54,7 +54,7 @@ function renderSelectedProducts(){
         );
 
         card.className =
-        'recent-card';
+        'selected-card';
 
         card.innerHTML = `
             <img
