@@ -14,6 +14,12 @@ function updateCart(){
         'selectedProducts',
         JSON.stringify(selectedProducts)
     );
+    if(
+    typeof updateStats ===
+    'function'
+    ){
+        updateStats();
+    }
     renderSelectedProducts();
 
 }
