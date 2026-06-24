@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://90leater.github.io/catalog/sitemap.xml
