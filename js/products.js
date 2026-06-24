@@ -29,7 +29,19 @@ function renderProducts(filteredProducts){
 
         card.className = 'card';
 
+        const topProductId =
+        getMostViewedProduct();
+
         card.innerHTML = `
+            
+         ${String(product.id) === String(topProductId)
+
+        ? `
+        <div class="hot-badge">
+        🔥 HOT
+        </div>
+        `
+        : ''}
             <img
                 src="${imagePath}"
                 alt="${product.nama}"
