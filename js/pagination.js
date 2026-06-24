@@ -41,18 +41,18 @@ function renderPagination(filteredProducts){
 
     }
 
-function updateProductCount(filteredProducts){
+function updateProductCount(
+    filteredProducts
+){
 
-    const start =
-    (currentPage - 1) * productsPerPage + 1;
-
-    const end =
-    Math.min(
-        currentPage * productsPerPage,
-        filteredProducts.length
+    const count =
+    document.getElementById(
+        'productCount'
     );
 
-    productCount.textContent =
-    `Menampilkan ${start}-${end} dari ${filteredProducts.length} produk`;
+    if(!count) return;
+
+    count.textContent =
+    `Menampilkan ...`;
 
 }
