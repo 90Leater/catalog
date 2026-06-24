@@ -18,7 +18,7 @@ async function renderProducts(filteredProducts){
     const topProductId =
         await getTopViewedProducts();
     
-    pageProducts.forEach(product => {
+        pageProducts.forEach(product => {
 
         const imagePath =
         `Images/${product.folder}/${product.thumbnail}`;
