@@ -19,112 +19,114 @@ function updateCart(){
 }
 function renderSelectedProducts(){
 
-    const container =
-    document.getElementById(
-        'selectedProductsList'
-    );
-
-    if(!container) return;
-
-    container.innerHTML = '';
-
-    if(
-    selectedProducts.length === 0
-    ){
-
-        container.innerHTML =
-        '<p>Belum ada produk dipilih</p>';
-
-        return;
-
-    }
-
-    selectedProducts.forEach(id => {
-
-        const product =
-        products.find(
-            p => p.id === id
-        );
-
-        if(!product) return;
-
-        const card =
-        document.createElement(
-            'div'
-        );
-
-        card.className =
-        'selected-card';
-
-        card.innerHTML = `
-            <button
-            class="remove-selected"
-            data-id="${product.id}">
-            ✕
-            </button>
-
-            <img
-            src="Images/${product.folder}/${product.thumbnail}"
-            loading="lazy">
-
-            <p>${product.nama}</p>
-`;
-
-        card.addEventListener(
-            'click',
-            () => {
-
-                const index =
-                products.findIndex(
-                    p => p.id === product.id
-                );
-
-                openProduct(
-                    product,
-                    index
-                );
-
-            }
-        );
-
-        container.appendChild(
-            card
-        );
-
-    });
-    const removeBtn =
-card.querySelector(
-'.remove-selected'
+const container =
+document.getElementById(
+    'selectedProductsList'
 );
 
-removeBtn.addEventListener(
-'click',
-(e) => {
+if(!container) return;
 
-    e.stopPropagation();
+container.innerHTML = '';
 
-    selectedProducts =
-    selectedProducts.filter(
-        id => id !== product.id
+if(
+selectedProducts.length === 0
+){
+
+    container.innerHTML =
+    '<p>Belum ada produk dipilih</p>';
+
+    return;
+
+}
+
+selectedProducts.forEach(id => {
+
+    const product =
+    products.find(
+        p => p.id === id
     );
 
-    localStorage.setItem(
-        'selectedProducts',
-        JSON.stringify(
-            selectedProducts
-        )
+    if(!product) return;
+
+    const card =
+    document.createElement(
+        'div'
     );
 
-    updateCart();
+    card.className =
+    'selected-card';
 
-    renderSelectedProducts();
+    card.innerHTML = `
+        <button
+        class="remove-selected"
+        data-id="${product.id}">
+            ✕
+        </button>
 
-    document
-    .querySelector(
-    `.product-checkbox[data-id="${product.id}"]`
-    )
-    ?.removeAttribute(
-    'checked'
+        <img
+        src="Images/${product.folder}/${product.thumbnail}"
+        loading="lazy">
+
+        <p>${product.nama}</p>
+    `;
+
+    card.addEventListener(
+        'click',
+        () => {
+
+            const index =
+            products.findIndex(
+                p => p.id === product.id
+            );
+
+            openProduct(
+                product,
+                index
+            );
+
+        }
+    );
+
+    container.appendChild(
+        card
+    );
+
+    const removeBtn =
+    card.querySelector(
+        '.remove-selected'
+    );
+
+    removeBtn.addEventListener(
+        'click',
+        (e) => {
+
+            e.stopPropagation();
+
+            selectedProducts =
+            selectedProducts.filter(
+                itemId =>
+                itemId !== product.id
+            );
+
+            localStorage.setItem(
+                'selectedProducts',
+                JSON.stringify(
+                    selectedProducts
+                )
+            );
+
+            const checkbox =
+            document.querySelector(
+            `.product-checkbox[data-id="${product.id}"]`
+            );
+
+            if(checkbox){
+                checkbox.checked = false;
+            }
+
+            updateCart();
+
+        }
     );
 
 });
