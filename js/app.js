@@ -27,8 +27,6 @@ fetch('product.json')
 
     loadCategories();
 
-    renderRecentProducts();
-
     renderProducts(products);
 
     renderPagination(products);
@@ -36,5 +34,7 @@ fetch('product.json')
     updateFavoriteCount();
 
     updateCart();
+    
+    renderSelectedProducts();
 
 });
