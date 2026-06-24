@@ -137,32 +137,32 @@ async function(){
 window.getTopProducts =
 async function(){
 
-    const snapshot =
-    await getDocs(
-        collection(
-            db,
-            'productViews'
-        )
-    );
+const snapshot =
+await getDocs(
+    collection(
+        db,
+        'productViews'
+    )
+);
 
-    const items = [];
+const items = [];
 
-    snapshot.forEach(doc => {
+snapshot.forEach(doc => {
 
-        items.push({
+    items.push({
 
-            id: doc.id,
+        id: doc.id,
 
-            views:
-            doc.data().views || 0
-
-        });
+        views:
+        doc.data().views || 0
 
     });
 
-    return items.sort(
-        (a,b) =>
-        b.views - a.views
-    ).slice(0,5);
+});
+
+return items.sort(
+    (a,b) =>
+    b.views - a.views
+).slice(0,5);
 
 };
