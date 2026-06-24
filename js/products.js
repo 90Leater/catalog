@@ -14,9 +14,6 @@ async function renderProducts(filteredProducts){
         start,
         end
     );
-
-    const topProductId =
-        await getTopViewedProducts();
     
         pageProducts.forEach(product => {
 
@@ -29,15 +26,6 @@ async function renderProducts(filteredProducts){
         card.className = 'card';
 
         card.innerHTML = `
-            
-         ${String(product.id) === String(topProductId)
-
-        ? `
-        <div class="hot-badge">
-        🔥 HOT
-        </div>
-        `
-        : ''}
             <img
                 src="${imagePath}"
                 alt="${product.nama}"
