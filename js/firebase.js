@@ -69,3 +69,27 @@ async function(productId){
     }
 
 };
+window.getProductViews =
+async function(productId){
+
+    const ref =
+    doc(
+        db,
+        'productViews',
+        String(productId)
+    );
+
+    const snap =
+    await getDoc(ref);
+
+    if(
+        snap.exists()
+    ){
+
+        return snap.data().views || 0;
+
+    }
+
+    return 0;
+
+};
