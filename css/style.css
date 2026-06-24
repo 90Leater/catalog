@@ -533,12 +533,13 @@ input,select{
 }
 .share-btn{
 
-    width:100%;
+    width:fit-content;
 
-    margin-top:10px;
-    margin-bottom:10px;
+    display:block;
 
-    padding:10px;
+    margin:10px auto;
+
+    padding:10px 20px;
 
     border:none;
 
@@ -952,11 +953,13 @@ body.dark .theme-footer{
 }
 .add-selection-btn{
 
-    width:100%;
+    width:fit-content;
 
-    margin:15px 0;
+    display:block;
 
-    padding:12px;
+    margin:10px auto;
+
+    padding:12px 20px;
 
     border:none;
 
@@ -971,5 +974,16 @@ body.dark .theme-footer{
     font-weight:700;
 
     cursor:pointer;
+
+}
+#modalWhatsapp{
+
+    width:fit-content;
+
+    display:block;
+
+    margin:10px auto;
+
+    padding:12px 20px;
 
 }
