@@ -116,3 +116,61 @@
     cursor:pointer;
 
 }
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.footer-links a{
+
+    display:block;
+
+    margin:8px 0;
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+.footer-links i{
+
+    width:22px;
+
+    text-align:center;
+
+    margin-right:8px;
+
+}
+
+.footer-grid iframe{
+
+    width:100%;
+
+    max-width:280px;
+
+    height:150px;
+
+    border-radius:10px;
+
+    margin-top:10px;
+
+}
+
+@media (max-width:768px){
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+}
