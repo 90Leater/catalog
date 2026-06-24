@@ -154,3 +154,73 @@ function getMostViewedProduct(){
     return topProductId;
 
 }
+async function renderTopProducts(){
+
+    const container =
+    document.getElementById(
+        'topProductsList'
+    );
+
+    if(!container) return;
+
+    container.innerHTML = '';
+
+    const topProducts =
+    await getTopProducts();
+
+    topProducts.forEach(item => {
+
+        const product =
+        products.find(
+            p =>
+            String(p.id) ===
+            String(item.id)
+        );
+
+        if(!product) return;
+
+        const card =
+        document.createElement(
+            'div'
+        );
+
+        card.className =
+        'top-product-card';
+
+        card.innerHTML = `
+            <img
+            src="Images/${product.folder}/${product.thumbnail}"
+            loading="lazy">
+
+            <p>${product.nama}</p>
+
+            <span>
+            👀 ${item.views}x
+            </span>
+        `;
+
+        card.addEventListener(
+            'click',
+            () => {
+
+                const index =
+                products.findIndex(
+                    p =>
+                    p.id === product.id
+                );
+
+                openProduct(
+                    product,
+                    index
+                );
+
+            }
+        );
+
+        container.appendChild(
+            card
+        );
+
+    });
+
+}
