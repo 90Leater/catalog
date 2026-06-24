@@ -52,3 +52,12 @@
     }
 
 }
+@media (max-width:768px){
+
+    .card img{
+
+        height:180px;
+
+    }
+
+}
