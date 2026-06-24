@@ -881,3 +881,39 @@ body.dark .theme-footer{
 #cartWhatsapp:hover{
     transform:translateY(-2px);
 }
+#selectedProductsList{
+    display:flex;
+    gap:12px;
+
+    overflow-x:auto;
+
+    padding:10px 0;
+
+    justify-content:center;
+}
+.selected-card{
+    flex:0 0 auto;
+
+    width:80px;
+
+    text-align:center;
+
+    cursor:pointer;
+}
+
+.selected-card img{
+    width:80px;
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+.selected-card p{
+    margin-top:5px;
+
+    font-size:12px;
+
+    font-weight:600;
+}
