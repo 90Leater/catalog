@@ -238,10 +238,10 @@ if(
 
 }
     document
-    .querySelector('.close')
-    .addEventListener(
-    'click',
-    () => {
+.querySelector('.close')
+.addEventListener(
+'click',
+() => {
 
     document.getElementById(
         'productModal'
@@ -249,7 +249,7 @@ if(
 
     const url =
     new URL(
-        window.location
+        window.location.href
     );
 
     url.searchParams.delete(
@@ -264,14 +264,9 @@ if(
 
 });
 
-    document.getElementById(
-        'productModal'
-    ).style.display = 'none';
-
-});
-    window.addEventListener(
-    'click',
-    (e) => {
+window.addEventListener(
+'click',
+(e) => {
 
     const modal =
     document.getElementById(
@@ -284,20 +279,21 @@ if(
 
         modal.style.display =
         'none';
-    const url =
-    new URL(
-    window.location
-    );
 
-    url.searchParams.delete(
-    'id'
-    );
+        const url =
+        new URL(
+            window.location.href
+        );
 
-    window.history.replaceState(
-    {},
-    '',
-    url.pathname
-    );
+        url.searchParams.delete(
+            'id'
+        );
+
+        window.history.replaceState(
+            {},
+            '',
+            url.pathname
+        );
 
     }
 
