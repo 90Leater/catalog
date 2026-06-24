@@ -1,3 +1,66 @@
+.modal-content{
+    background:white;
+    width:95%;
+    max-width:900px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:12px;
+    position:relative;
+}
+
+#galleryThumbs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:15px 0;
+}
+
+#galleryThumbs img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:8px;
+    cursor:pointer;
+    border:2px solid #ddd;
+}
+
+#galleryThumbs img:hover{
+    border-color:#25D366;
+}
+
+.color-btn{
+    padding:8px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:white;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.color-btn:hover{
+    background:#25D366;
+    color:white;
+}
+
+.color-btn.active{
+    background:#25D366;
+    color:white;
+    border-color:#25D366;
+    font-weight:bold;
+}
+
+#modalWhatsapp{
+
+    width:fit-content;
+
+    display:block;
+
+    margin:10px auto;
+
+    padding:12px 20px;
+
+}
+
 .modal{
     display:none;
     position:fixed;
