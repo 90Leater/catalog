@@ -172,6 +172,44 @@ ${window.location.href}`;
         });
 
     }
+    document.getElementById(
+'addToSelection'
+).onclick = () => {
+
+if(
+!selectedProducts.includes(
+    product.id
+)
+){
+
+    selectedProducts.push(
+        product.id
+    );
+
+    localStorage.setItem(
+        'selectedProducts',
+        JSON.stringify(
+            selectedProducts
+        )
+    );
+
+    updateCart();
+
+    alert(
+        product.nama +
+        ' ditambahkan ke Produk Dipilih'
+    );
+
+}else{
+
+    alert(
+        product.nama +
+        ' sudah ada di Produk Dipilih'
+    );
+
+}
+
+};
 
     document.getElementById('prevProduct').disabled =
     (index === 0);
