@@ -131,7 +131,7 @@ async function renderTopProducts(){
     container.innerHTML = '';
 
     const topProducts =
-    await getTopViewedProduct();
+    await getTopViewedProducts();
 
     topProducts.forEach(item => {
 
