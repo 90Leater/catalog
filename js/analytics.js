@@ -38,3 +38,56 @@ function getTopViewedProducts(){
     .slice(0,5);
 
 }
+
+function renderTopProducts(){
+
+    const container =
+    document.getElementById(
+        'topProducts'
+    );
+
+    if(!container) return;
+
+    container.innerHTML = '';
+
+    const topProducts =
+    getTopViewedProducts();
+
+    topProducts.forEach(
+    ([id,count]) => {
+
+        const product =
+        products.find(
+            p =>
+            String(p.id) ===
+            String(id)
+        );
+
+        if(!product) return;
+
+        const item =
+        document.createElement(
+            'div'
+        );
+
+        item.className =
+        'selected-card';
+
+        item.innerHTML = `
+            <img
+            src="Images/${product.folder}/${product.thumbnail}">
+
+            <p>${product.nama}</p>
+
+            <small>
+                ${count}x dilihat
+            </small>
+        `;
+
+        container.appendChild(
+            item
+        );
+
+    });
+
+}
