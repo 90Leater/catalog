@@ -7,8 +7,8 @@ function updateCart(){
     document.getElementById(
     'cartCount'
     ).textContent =
-
-    '📋 ' + selectedProducts.length + ' Produk Dipilih';
+    '📋 Produk Dipilih • ' +
+    selectedProducts.length;
 
     localStorage.setItem(
         'selectedProducts',
