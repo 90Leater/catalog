@@ -2,6 +2,10 @@ function openProduct(product,index){
 
     saveRecent(product.id);
 
+    trackProductView(
+    product.id
+    );
+
     renderRecentProducts();
 
     currentProductIndex = index;
