@@ -12,11 +12,8 @@ function openProduct(product,index){
     );
 
     }
-
-    renderRecentProducts();
-
     renderTopProducts();
-
+    renderRecentProducts();
 
     currentProductIndex = index;
 
