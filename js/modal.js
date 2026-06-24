@@ -6,6 +6,22 @@ function openProduct(product,index){
 
     currentProductIndex = index;
 
+    const url =
+    new URL(
+    window.location
+    );
+
+    url.searchParams.set(
+    'id',
+    product.id
+    );
+
+    window.history.replaceState(
+    {},
+    '',
+    url
+    );
+
     const imagePath =
     `Images/${product.folder}/${product.thumbnail}`;
 
@@ -231,10 +247,31 @@ if(
         'productModal'
     ).style.display = 'none';
 
+    const url =
+    new URL(
+        window.location
+    );
+
+    url.searchParams.delete(
+        'id'
+    );
+
+    window.history.replaceState(
+        {},
+        '',
+        url.pathname
+    );
+
 });
-window.addEventListener(
-'click',
-(e) => {
+
+    document.getElementById(
+        'productModal'
+    ).style.display = 'none';
+
+});
+    window.addEventListener(
+    'click',
+    (e) => {
 
     const modal =
     document.getElementById(
@@ -247,6 +284,20 @@ window.addEventListener(
 
         modal.style.display =
         'none';
+    const url =
+    new URL(
+    window.location
+    );
+
+    url.searchParams.delete(
+    'id'
+    );
+
+    window.history.replaceState(
+    {},
+    '',
+    url.pathname
+    );
 
     }
 
