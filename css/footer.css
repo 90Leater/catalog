@@ -1,6 +1,118 @@
-.footer{}
-.footer-grid{}
-.footer-links{}
-.footer-desc{}
-.copyright{}
-.theme-footer{}
+.footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    margin-top:40px;
+
+}
+
+.footer h3{
+
+    margin:0;
+
+    font-size:28px;
+
+}
+
+.footer-links{
+
+    margin:20px 0;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 10px;
+
+}
+
+.footer-links a:hover{
+
+    color:#25D366;
+
+}
+.footer-desc{
+
+    max-width:500px;
+
+    margin:10px auto 25px;
+
+    color:#ccc;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+    max-width:900px;
+
+    margin:20px auto;
+
+}
+
+.footer-grid h4{
+
+    margin-bottom:10px;
+
+    color:#25D366;
+
+}
+
+.footer-grid a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+.footer-grid p{
+
+    margin:5px 0;
+
+}
+
+.copyright{
+
+    color:#aaa;
+
+    font-size:14px;
+
+}
+.theme-footer{
+
+    display:block;
+
+    margin:20px auto 10px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#25D366;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
