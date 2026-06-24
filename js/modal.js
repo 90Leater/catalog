@@ -1,5 +1,18 @@
+let currentProductIndex = 0;
+
+let selectedColor = '';
+
+let currentProduct = null;
+
+let currentColors = [];
+
+let currentColorIndex = 0;
+
 function openProduct(product,index){
 
+    currentProduct =
+    product;
+    
     saveRecent(product.id);
 
     if(
@@ -222,6 +235,13 @@ ${window.location.href}`;
 
     if(product.warna){
 
+        currentColors =
+        Object.entries(
+        product.warna
+        );
+
+        currentColorIndex = 0;
+
         Object.entries(product.warna)
         .forEach(([namaWarna,file]) => {
 
@@ -241,6 +261,12 @@ ${window.location.href}`;
             }
 
             btn.addEventListener('click', () => {
+
+            currentColorIndex =
+            currentColors.findIndex(
+            ([warna]) =>
+            warna === namaWarna
+            );
 
             selectedColor = namaWarna;
 
@@ -358,7 +384,134 @@ document.getElementById(
     'block';
 
 }
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const modalImage =
+document.getElementById(
+'modalImage'
+);
+
+modalImage.addEventListener(
+'touchstart',
+(e) => {
+
+    touchStartX =
+    e.changedTouches[0]
+    .screenX;
+
+}
+);
+
+modalImage.addEventListener(
+'touchend',
+(e) => {
+
+    touchEndX =
+    e.changedTouches[0]
+    .screenX;
+
+    handleSwipe();
+
+}
+);
+
+function handleSwipe(){
+
+    const minSwipe = 50;
+
+    if(
+    touchEndX <
+    touchStartX -
+    minSwipe
+    ){
+
+        nextColor();
+
+    }
+
+    if(
+    touchEndX >
+    touchStartX +
+    minSwipe
+    ){
+
+        prevColor();
+
+    }
+
+}
+
+function nextColor(){
+
+    if(
+    currentColorIndex <
+    currentColors.length - 1
+    ){
+
+        currentColorIndex++;
+
+        changeColorByIndex();
+
+    }
+
+}
+
+function prevColor(){
+
+    if(
+    currentColorIndex > 0
+    ){
+
+        currentColorIndex--;
+
+        changeColorByIndex();
+
+    }
+
+}
+
+function changeColorByIndex(){
+
+    const [
+        namaWarna,
+        file
+    ] =
+    currentColors[
+        currentColorIndex
+    ];
+
+    selectedColor =
+    namaWarna;
+
+    document.getElementById(
+        'modalImage'
+    ).src =
+
+    `Images/${currentProduct.folder}/${file}`;
+
     document
+    .querySelectorAll(
+    '.color-btn'
+    )
+    .forEach(
+    btn =>
+    btn.classList.remove(
+    'active'
+    )
+    );
+
+    document
+    .querySelectorAll(
+    '.color-btn'
+    )[currentColorIndex]
+    ?.classList.add(
+    'active'
+    );
+
+}
+
 document
 .querySelector('.close')
 .addEventListener(
