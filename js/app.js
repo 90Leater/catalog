@@ -37,4 +37,39 @@ fetch('product.json')
     
     renderSelectedProducts();
 
+    const params =
+new URLSearchParams(
+    window.location.search
+);
+
+const productId =
+params.get('id');
+
+if(productId){
+
+    const product =
+    products.find(
+        p =>
+        String(p.id) ===
+        String(productId)
+    );
+
+    if(product){
+
+        const index =
+        products.findIndex(
+            p =>
+            p.id ===
+            product.id
+        );
+
+        openProduct(
+            product,
+            index
+        );
+
+    }
+
+}
+
 });
