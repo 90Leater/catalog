@@ -315,11 +315,44 @@ addBtn.onclick = () => {
 
 };
 
-    document.getElementById('prevProduct').disabled =
-    (index === 0);
+    document.getElementById(
+'prevProduct'
+).onclick = () => {
 
-    document.getElementById('nextProduct').disabled =
-    (index === products.length - 1);
+    if(
+    currentProductIndex > 0
+    ){
+
+        openProduct(
+            products[
+                currentProductIndex - 1
+            ],
+            currentProductIndex - 1
+        );
+
+    }
+
+};
+
+document.getElementById(
+'nextProduct'
+).onclick = () => {
+
+    if(
+    currentProductIndex <
+    products.length - 1
+    ){
+
+        openProduct(
+            products[
+                currentProductIndex + 1
+            ],
+            currentProductIndex + 1
+        );
+
+    }
+
+};
 
     document.getElementById('productModal').style.display =
     'block';
