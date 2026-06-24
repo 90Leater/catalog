@@ -4,6 +4,8 @@ let currentPage = 1;
 let currentView = 'all';
 let currentProductIndex = 0;
 let selectedColor = '';
+let currentColors = [];
+let currentColorIndex = 0;
 
 const productsPerPage = 10;
 
