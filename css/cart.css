@@ -153,3 +153,21 @@ select-product{
     color:#222;
 
 }
+#cartBar{
+
+background:none;
+
+box-shadow:none;
+
+padding:0;
+
+margin-bottom:15px;
+
+}
+#cartWhatsapp{
+
+display:block;
+
+margin:0 auto;
+
+}
