@@ -61,6 +61,21 @@ function openProduct(product,index){
     document.getElementById('modalCode').textContent =
     'Kode: ' + product.kode;
 
+    getProductViews(
+    product.id
+    )
+    .then(views => {
+
+    document.getElementById(
+        'productViews'
+    ).textContent =
+
+    '👀 ' +
+    views +
+    'x Dilihat';
+
+});
+
     document.getElementById(
     'copyCodeBtn'
     ).onclick = () => {
