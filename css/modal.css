@@ -1,12 +1,175 @@
-.modal{}
-.modal-content{}
-.modal-body{}
-.modal-left{}
-.modal-right{}
-.close{}
-.modal-nav{}
-.color-btn{}
-.related-products{}
-.related-item{}
-.share-btn{}
-.add-selection-btn{}
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    z-index:999;
+}
+
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:600px;
+    margin:20px auto;
+    padding:15px;
+    border-radius:12px;
+    position:relative;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+.modal-content img{
+    width:100%;
+    max-width:350px;
+    max-height:350px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto;
+    border-radius:10px;
+}
+
+.modal-body{
+    display:flex;
+    gap:20px;
+}
+
+.modal-left{
+    flex:1;
+}
+
+.modal-right{
+    flex:1;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.modal-nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:15px 0;
+}
+
+.modal-nav button{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#25D366;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.modal-nav button:hover{
+    opacity:.9;
+}
+
+.color-btn{
+    padding:8px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:white;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.color-btn:hover{
+    background:#25D366;
+    color:white;
+}
+.related-products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:10px 0 20px;
+}
+
+.related-item{
+    width:90px;
+    cursor:pointer;
+    text-align:center;
+}
+
+.related-item img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #ddd;
+}
+
+.related-item img:hover{
+    transform:scale(1.05);
+    transition:.3s;
+    border-color:#25D366;
+}
+
+.related-item span{
+    display:block;
+    margin-top:5px;
+    font-size:12px;
+}
+.share-btn{
+
+    width:fit-content;
+
+    display:block;
+
+    margin:10px auto;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#4285F4;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.share-btn:hover{
+
+    opacity:.9;
+
+}
+.add-selection-btn{
+
+    width:fit-content;
+
+    display:block;
+
+    margin:10px auto;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff9800;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
