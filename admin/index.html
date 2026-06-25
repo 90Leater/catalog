@@ -170,5 +170,59 @@ placeholder="Cari produk...">
 
 <script type="module" src="js/admin.js"></script>
 
+<div id="productModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                Tambah Produk
+            </h2>
+
+            <button id="closeModal">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="modal-body">
+
+            <label>Nama Produk</label>
+
+            <input
+                id="productName"
+                type="text">
+
+            <label>Kode</label>
+
+            <input
+                id="productCode"
+                type="text">
+
+            <label>Kategori</label>
+
+            <input
+                id="productCategory"
+                type="text">
+
+            <label>Folder</label>
+
+            <input
+                id="productFolder"
+                type="text">
+
+            <button id="saveProduct">
+
+                Simpan
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
