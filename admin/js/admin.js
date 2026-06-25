@@ -12,6 +12,8 @@ import {
     setupImportButton
 } from "./import.js";
 
+import "./modal.js";
+
 document.addEventListener(
     "DOMContentLoaded",
     init
