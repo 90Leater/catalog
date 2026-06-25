@@ -19,14 +19,20 @@ closeButton.addEventListener(
     closeModal
 );
 
-export function openModal(){
+export function openModal(reset = true){
 
-    clearForm();
+    if(reset){
 
-    document.getElementById(
-        "modalTitle"
-    ).textContent =
-    "Tambah Produk";
+        clearForm();
+
+        editingProductId = null;
+
+        document.getElementById(
+            "modalTitle"
+        ).textContent =
+        "Tambah Produk";
+
+    }
 
     modal.classList.remove(
         "hidden"
@@ -35,6 +41,15 @@ export function openModal(){
 }
 
 export function closeModal(){
+
+    clearForm();
+
+    editingProductId = null;
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+    "Tambah Produk";
 
     modal.classList.add(
         "hidden"
