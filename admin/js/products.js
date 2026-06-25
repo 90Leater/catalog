@@ -1,11 +1,11 @@
 import {
     db,
     collection,
-    getDocs,
     onSnapshot,
     doc,
     deleteDoc
-} from "../../firebase-admin.js";
+}
+from "../../firebase-admin.js";
 
 const productTable =
 document.getElementById(
@@ -93,6 +93,7 @@ function createProductRow(product){
     productTable.appendChild(row);
 
 }
+
 document.addEventListener(
     "click",
     async (event)=>{
@@ -101,31 +102,35 @@ document.addEventListener(
             !event.target.classList.contains(
                 "deleteBtn"
             )
-        ) return;
+        ){
+            return;
+        }
 
         const id =
         event.target.dataset.id;
 
         const confirmDelete =
         confirm(
-            "Hapus produk ini?"
+            "Yakin ingin menghapus produk ini?"
         );
 
-        if(!confirmDelete) return;
+        if(!confirmDelete){
+            return;
+        }
 
         try{
 
             await deleteDoc(
-
                 doc(
                     db,
                     "products",
                     id
                 )
-
             );
 
-            loadProducts();
+            alert(
+                "Produk berhasil dihapus."
+            );
 
         }catch(error){
 
