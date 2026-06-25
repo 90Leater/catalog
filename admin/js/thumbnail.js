@@ -1,3 +1,11 @@
+import {
+    storage,
+    ref,
+    uploadBytes,
+    getDownloadURL
+}
+from "../../firebase-admin.js";
+
 const uploadBox =
 document.getElementById(
 "thumbnailUpload"
@@ -37,7 +45,39 @@ export function previewThumbnail(){
 const file =
 fileInput.files[0];
 
-if(!file){
+if(file.size > 2 * 1024 * 1024){
+
+    alert(
+        "Ukuran gambar maksimal 2 MB."
+    );
+
+    fileInput.value = "";
+
+    return;
+
+}
+
+const allowed =
+
+[
+"image/jpeg",
+"image/png",
+"image/webp"
+];
+
+if(
+
+!allowed.includes(
+file.type
+)
+
+){
+
+alert(
+"Hanya JPG, PNG, dan WEBP."
+);
+
+fileInput.value="";
 
 return;
 
@@ -79,5 +119,45 @@ fileInput.value="";
 export function getThumbnailFile(){
 
 return fileInput.files[0];
+
+}
+
+export async function uploadThumbnail(
+    productId
+){
+
+    const file =
+    fileInput.files[0];
+
+    if(!file){
+
+        return "";
+    }
+
+    const extension =
+    file.name
+    .split(".")
+    .pop();
+
+    const storageRef =
+    ref(
+
+        storage,
+
+        `products/${productId}/thumbnail.${extension}`
+
+    );
+
+    await uploadBytes(
+
+        storageRef,
+
+        file
+
+    );
+
+    return await getDownloadURL(
+        storageRef
+    );
 
 }
