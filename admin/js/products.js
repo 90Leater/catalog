@@ -17,69 +17,43 @@ document.getElementById(
     "totalProducts"
 );
 
-export async function loadProducts(){
+export function listenProducts(){
 
-    try{
-
-        productTable.replaceChildren();
-
-        const loadingRow =
-        document.createElement("tr");
-
-        loadingRow.innerHTML = `
-            <td colspan="5">
-                Memuat data...
-            </td>
-        `;
-
-        productTable.appendChild(
-            loadingRow
-        );
-
-        onSnapshot(
+    onSnapshot(
 
         collection(
-        db,
-        "products"
+            db,
+            "products"
         ),
 
         (snapshot)=>{
 
-        productTable.replaceChildren();
+            productTable.replaceChildren();
 
-        let total = 0;
+            let total = 0;
 
-        snapshot.forEach(doc=>{
+            snapshot.forEach(doc=>{
 
-        total++;
+                total++;
 
-        createProductRow(
-        doc.data()
-        );
+                createProductRow(
+                    doc.data()
+                );
 
-        });
+            });
 
-        totalProducts.textContent =
-        total;
+            totalProducts.textContent =
+            total;
+
+        },
+
+        (error)=>{
+
+            console.error(error);
 
         }
 
-        );
-
-
-    }catch(error){
-
-        console.error(error);
-
-        productTable.innerHTML = `
-            <tr>
-                <td colspan="5">
-                    Gagal mengambil data.
-                </td>
-            </tr>
-        `;
-
-    }
+    );
 
 }
 
