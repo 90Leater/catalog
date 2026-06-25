@@ -150,8 +150,6 @@ await runTransaction(
 
         closeModal();
 
-        loadProducts();
-
         alert(
             "Produk berhasil ditambahkan."
         );
