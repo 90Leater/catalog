@@ -20,6 +20,13 @@ import {
 }
 from "./products.js";
 
+import {
+
+    uploadThumbnail
+
+}
+from "./thumbnail.js";
+
 const saveButton =
 document.getElementById(
     "saveProduct"
@@ -140,7 +147,11 @@ if(editingId){
     );
 
 }else{
-
+    
+    const thumbnailUrl =
+    await uploadThumbnail(
+    nextId
+    );
     await setDoc(
 
         doc(
@@ -161,7 +172,8 @@ if(editingId){
 
             folder,
 
-            thumbnail:"",
+            thumbnail:
+            thumbnailUrl,
 
             warna:{},
 
