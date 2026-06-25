@@ -9,6 +9,7 @@ import {
 import "./modal.js";
 import "./create-product.js";
 import "./edit-product.js";
+import "./thumbnail.js";
 
 document.addEventListener(
     "DOMContentLoaded",
