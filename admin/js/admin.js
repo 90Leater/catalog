@@ -14,6 +14,8 @@ import {
 
 import "./modal.js";
 
+import "./create-product.js";
+
 document.addEventListener(
     "DOMContentLoaded",
     init
