@@ -1,7 +1,9 @@
 import {
     db,
     collection,
-    addDoc,
+    getDocs,
+    doc,
+    setDoc,
     serverTimestamp
 }
 from "../../firebase-admin.js";
