@@ -8,14 +8,16 @@ import {
     getDocs,
     collection,
     query,
+    where,
     orderBy,
     limit,
     setDoc,
-    updateDoc,
-    increment,
     addDoc,
+    updateDoc,
     deleteDoc,
-    serverTimestamp
+    increment,
+    serverTimestamp,
+    writeBatch
 }
     from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
 
@@ -47,25 +49,32 @@ getFirestore(app);
 const storage =
 getStorage(app);
 
+window.db = db;
 window.storage = storage;
 
+window.doc = doc;
+window.getDoc = getDoc;
+window.getDocs = getDocs;
+
+window.collection = collection;
+window.query = query;
+window.where = where;
+window.orderBy = orderBy;
+window.limit = limit;
+
+window.setDoc = setDoc;
 window.addDoc = addDoc;
+window.updateDoc = updateDoc;
 window.deleteDoc = deleteDoc;
+
+window.increment = increment;
 window.serverTimestamp = serverTimestamp;
+window.writeBatch = writeBatch;
 
 window.ref = ref;
 window.uploadBytes = uploadBytes;
 window.getDownloadURL = getDownloadURL;
 window.deleteObject = deleteObject;
-
-window.db = db;
-window.doc = doc;
-window.getDoc = getDoc;
-window.getDocs = getDocs;
-window.collection = collection;
-window.setDoc = setDoc;
-window.updateDoc = updateDoc;
-window.increment = increment;
 
 
 window.trackProductView =
@@ -73,34 +82,33 @@ async function(productId){
 
     try{
 
-    const ref =
+    const productRef =
     doc(
         db,
         'productViews',
         String(productId)
-    );
+);
 
     const snap =
-    await getDoc(ref);
+    await getDoc(productRef);
 
     if(snap.exists()){
 
-        await updateDoc(
-            ref,
-            {
-                views:
-                increment(1)
-            }
-        );
+    await updateDoc(
+        productRef,
+    {
+        views: increment(1)
+    }
+);            
 
     }else{
 
-        await setDoc(
-            ref,
-            {
-                views:1
-            }
-        );
+    await setDoc(
+        productRef,
+    {
+        views: 1
+    }
+);
 
     }
 
@@ -119,7 +127,7 @@ async function(productId){
 
     try{
 
-    const ref =
+    const productRef =
     doc(
         db,
         'productViews',
@@ -127,7 +135,7 @@ async function(productId){
     );
 
     const snap =
-    await getDoc(ref);
+    await getDoc(productRef);
 
     if(
         snap.exists()
