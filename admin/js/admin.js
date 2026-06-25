@@ -1,32 +1,11 @@
 import '../../firebase.js';
 
-import './import.js';
+import './auth.js';
 import './products.js';
 import './categories.js';
 import './upload.js';
-import './auth.js';
+import './import.js';
 
-console.log('GO.Leather Admin Loaded');
-
-document
-.getElementById(
-'addProduct'
-)
-.addEventListener(
-'click',
-()=>{
-
-alert(
-'Fitur Tambah Produk segera dibuat.'
+console.log(
+'GO.Leather Admin Ready'
 );
-
-}
-);
-
-document
-.getElementById(
-'importJson'
-)
-.addEventListener(
-'click',
-importProducts);
