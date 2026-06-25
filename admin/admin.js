@@ -2,22 +2,22 @@ document
 .getElementById(
 'addProduct'
 )
-.onclick=()=>{
+.onclick = ()=>{
 
 alert(
-'Fitur tambah produk akan dibuat berikutnya.'
+'Menu Tambah Produk akan dibuat pada tahap berikutnya.'
 );
 
 };
 
 document
 .getElementById(
-'importProduct'
+'importJson'
 )
-.onclick=()=>{
+.onclick = ()=>{
 
 alert(
-'Fitur import product.json akan dibuat berikutnya.'
+'Import product.json akan dibuat pada tahap berikutnya.'
 );
 
 };
