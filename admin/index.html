@@ -188,39 +188,122 @@ placeholder="Cari produk...">
 
         <div class="modal-body">
 
-            <label>Nama Produk</label>
+<div class="form-group">
 
-            <input
-                id="productName"
-                type="text">
+<label for="productName">
+Nama Produk
+</label>
 
-            <label>Kode</label>
+<input
+id="productName"
+type="text"
+placeholder="Contoh : Betmen">
 
-            <input
-                id="productCode"
-                type="text">
+</div>
 
-            <label>Kategori</label>
+<div class="form-group">
 
-            <input
-                id="productCategory"
-                type="text">
+<label for="productCode">
+Kode Produk
+</label>
 
-            <label>Folder</label>
+<input
+id="productCode"
+type="text"
+placeholder="Contoh : BET001">
 
-            <input
-                id="productFolder"
-                type="text">
+</div>
 
-            <button id="saveProduct">
+<div class="form-group">
 
-                Simpan
+<label for="productCategory">
+Kategori
+</label>
 
-            </button>
+<select id="productCategory">
 
-        </div>
+<option value="">
+Pilih Kategori
+</option>
 
-    </div>
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label for="productFolder">
+Folder Produk
+</label>
+
+<input
+id="productFolder"
+type="text"
+placeholder="Contoh : Betmen 7cm">
+
+</div>
+
+<div class="form-group">
+
+<label>
+Thumbnail
+</label>
+
+<div
+id="thumbnailUpload"
+class="upload-box">
+
+Klik untuk memilih thumbnail
+
+</div>
+
+<input
+id="thumbnailFile"
+type="file"
+accept="image/*"
+hidden>
+
+</div>
+
+<hr>
+
+<div class="form-group">
+
+<div class="section-title">
+
+<h3>Daftar Warna</h3>
+
+<button
+type="button"
+id="addColor">
+
++ Tambah Warna
+
+</button>
+
+</div>
+
+<div id="colorList">
+
+<p class="empty-text">
+
+Belum ada warna.
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<button
+id="saveProduct"
+class="save-btn">
+
+Simpan Produk
+
+</button>
 
 </div>
 
