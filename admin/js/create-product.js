@@ -16,14 +16,7 @@ import {
 from "./modal.js";
 
 import {
-    loadProducts
-}
-from "./products.js";
-
-import {
-
     uploadThumbnail
-
 }
 from "./thumbnail.js";
 
@@ -76,121 +69,146 @@ async function saveProduct(){
 
         }
 
-        const counterRef =
-doc(
-    db,
-    "system",
-    "counter"
-);
+        const editingId =
+        getEditingProduct();
 
-const nextId =
-await runTransaction(
-    db,
-    async(transaction)=>{
+        // =========================
+        // EDIT PRODUK
+        // =========================
 
-        const counterDoc =
-        await transaction.get(
-            counterRef
-        );
+        if(editingId){
 
-        if(
-            !counterDoc.exists()
-        ){
+            await updateDoc(
 
-            throw new Error(
-                "Counter tidak ditemukan."
+                doc(
+                    db,
+                    "products",
+                    editingId
+                ),
+
+                {
+
+                    kode,
+
+                    nama,
+
+                    kategori,
+
+                    folder
+
+                }
+
             );
 
+            closeModal();
+
+            setEditingProduct(null);
+
+            alert(
+                "Produk berhasil diperbarui."
+            );
+
+            return;
+
         }
 
-        const currentId =
-        counterDoc.data().nextProductId;
+        // =========================
+        // TAMBAH PRODUK
+        // =========================
 
-        transaction.update(
-            counterRef,
-            {
-                nextProductId:
-                currentId + 1
-            }
+        const counterRef =
+        doc(
+            db,
+            "system",
+            "counter"
         );
 
-        return currentId;
+        const nextId =
+        await runTransaction(
 
-    }
-);
-        
-        const editingId =
-getEditingProduct();
-
-if(editingId){
-
-    await updateDoc(
-
-        doc(
             db,
-            "products",
-            editingId
-        ),
 
-        {
+            async(transaction)=>{
 
-            kode,
+                const counterDoc =
+                await transaction.get(
+                    counterRef
+                );
 
-            nama,
+                if(
+                    !counterDoc.exists()
+                ){
 
-            kategori,
+                    throw new Error(
+                        "Counter tidak ditemukan."
+                    );
 
-            folder
+                }
 
-        }
+                const currentId =
+                counterDoc.data().nextProductId;
 
-    );
+                transaction.update(
 
-}else{
-    
-    const thumbnailUrl =
-    await uploadThumbnail(
-    nextId
-    );
-    await setDoc(
+                    counterRef,
 
-        doc(
-            db,
-            "products",
-            String(nextId)
-        ),
+                    {
 
-        {
+                        nextProductId:
+                        currentId + 1
 
-            id: nextId,
+                    }
 
-            kode,
+                );
 
-            nama,
+                return currentId;
 
-            kategori,
+            }
 
-            folder,
+        );
 
-            thumbnail:
-            thumbnailUrl,
+        const thumbnailUrl =
+        await uploadThumbnail(
+            nextId
+        );
 
-            warna:{},
+        await setDoc(
 
-            active:true,
+            doc(
+                db,
+                "products",
+                String(nextId)
+            ),
 
-            views:0,
+            {
 
-            order:nextId,
+                id: nextId,
 
-            createdAt:
-            serverTimestamp()
+                kode,
 
-        }
+                nama,
 
-    );
+                kategori,
 
-}
+                folder,
+
+                thumbnail:
+                thumbnailUrl,
+
+                warna:{},
+
+                active:true,
+
+                views:0,
+
+                order:nextId,
+
+                createdAt:
+                serverTimestamp()
+
+            }
+
+        );
 
         closeModal();
 
@@ -207,7 +225,7 @@ if(editingId){
         console.error(error);
 
         alert(
-            "Gagal menambahkan produk."
+            error.message
         );
 
     }
