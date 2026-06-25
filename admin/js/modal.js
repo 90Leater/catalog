@@ -1,3 +1,5 @@
+let editingProductId = null;
+
 const modal =
 document.getElementById("productModal");
 
@@ -57,5 +59,17 @@ export function clearForm(){
     document.getElementById(
         "productFolder"
     ).value = "";
+
+}
+
+export function setEditingProduct(id){
+
+    editingProductId = id;
+
+}
+
+export function getEditingProduct(){
+
+    return editingProductId;
 
 }
