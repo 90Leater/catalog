@@ -1,111 +1,151 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
 
 <title>GO.Leather Admin</title>
 
-<link
-rel="stylesheet"
-href="admin.css">
+<link rel="stylesheet" href="admin.css">
 
 </head>
 
 <body>
 
-<header class="header">
+<aside class="sidebar">
 
-    <h1>GO.Leather Admin</h1>
+    <div class="logo">
+        GO.Leather
+    </div>
 
-    <button id="logoutBtn">
-        Logout
-    </button>
+    <ul>
+
+        <li class="active">
+            Dashboard
+        </li>
+
+        <li>
+            Produk
+        </li>
+
+        <li>
+            Kategori
+        </li>
+
+        <li>
+            Pengunjung
+        </li>
+
+        <li>
+            Logout
+        </li>
+
+    </ul>
+
+</aside>
+
+<main>
+
+<header>
+
+<h2>
+Dashboard
+</h2>
 
 </header>
 
-<main class="container">
+<section class="cards">
 
-    <section class="cards">
+<div class="card">
 
-        <div class="card">
+<h3>Total Produk</h3>
 
-            <h3>Total Produk</h3>
+<span id="totalProducts">
 
-            <span id="totalProducts">
-                0
-            </span>
+0
 
-        </div>
+</span>
 
-        <div class="card">
+</div>
 
-            <h3>Total View</h3>
+<div class="card">
 
-            <span id="totalViews">
-                0
-            </span>
+<h3>Total View</h3>
 
-        </div>
+<span id="totalViews">
 
-    </section>
+0
 
-    <section class="toolbar">
+</span>
 
-        <button id="addProduct">
+</div>
 
-            + Tambah Produk
+<div class="card">
 
-        </button>
+<h3>Produk Terpopuler</h3>
 
-        <button id="importProduct">
+<span id="topProduct">
 
-            Import product.json
+-
 
-        </button>
+</span>
 
-        <input
-        id="searchProduct"
-        type="text"
-        placeholder="Cari produk...">
+</div>
 
-    </section>
+</section>
 
-    <table>
+<section class="toolbar">
 
-        <thead>
+<button id="addProduct">
 
-            <tr>
++ Tambah Produk
 
-                <th>ID</th>
+</button>
 
-                <th>Nama</th>
+<button id="importJson">
 
-                <th>Kategori</th>
+Import product.json
 
-                <th>Aksi</th>
+</button>
 
-            </tr>
+<input
+type="text"
+id="searchProduct"
+placeholder="Cari produk...">
 
-        </thead>
+</section>
 
-        <tbody id="productTable">
+<table>
 
-        </tbody>
+<thead>
 
-    </table>
+<tr>
+
+<th>ID</th>
+
+<th>Nama</th>
+
+<th>Kategori</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productTable">
+
+</tbody>
+
+</table>
 
 </main>
 
 <script src="../firebase.js"></script>
-
 <script src="admin.js"></script>
 
 </body>
-
 </html>
