@@ -22,7 +22,7 @@ window.addEventListener(
         }
 
     }
-);
+    );
 
 backToTop.addEventListener(
     'click',
